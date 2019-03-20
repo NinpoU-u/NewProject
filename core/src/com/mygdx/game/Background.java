@@ -4,7 +4,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 
-import java.util.Vector;
 
 public class Background {
 
@@ -16,10 +15,11 @@ public class Background {
             tx = new Texture("fon.png");
             this.pos = pos;
         }
+
     }
 
     private int speed;
-    private  BGPicture[] backs;
+    private BGPicture[] backs;
 
     public Background(){
         speed = 4;
@@ -35,12 +35,13 @@ public class Background {
     }
 
     public void update(){
-        for (int i = 0; i <backs.length; i++) {
-           backs[i].pos.x -= speed;
+        for (int i = 0; i < backs.length; i++) {
+            backs[i].pos.x -= speed;
         }
-        backs[0].pos.x -= speed;
-        if (backs[0].pos.x < - 800){
-            backs[0].pos.x = 800;
+
+        if(backs[0].pos.x < -800){
+            backs[0].pos.x = 0;
+            backs[1].pos.x = 800;
         }
     }
 }
