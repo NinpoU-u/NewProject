@@ -10,8 +10,8 @@ public class Bird {
 
 
     public Bird(){
-        img = new Texture("birdOld.jpg");
-        position = new Vector2(100, 350);
+        img = new Texture("bird.png");
+        position = new Vector2(100, 250);
     }
     public void render(SpriteBatch batch){
         batch.draw(img, position.x, position.y);
