@@ -9,12 +9,18 @@ import java.util.Vector;
 public class Background {
     private Texture tx;
     private Vector2 pos;
+    private int speed;
 
     public Background(){
         tx = new Texture("fon.png");
         pos = new Vector2(0,0);
+        speed = 4;
     }
     public void render(SpriteBatch batch){
         batch.draw(tx, pos.x, pos.y);
+    }
+
+    public void update(){
+        pos.x -= speed;
     }
 }
