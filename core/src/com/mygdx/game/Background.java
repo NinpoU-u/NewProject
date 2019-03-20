@@ -25,7 +25,7 @@ public class Background {
         speed = 4;
         backs = new BGPicture[2];
         backs[0] = new BGPicture(new Vector2(0,0));
-        backs[1] = new BGPicture(new Vector2(800,0));
+        backs[1] = new BGPicture(new Vector2(1920,0));
     }
 
     public void render(SpriteBatch batch){
@@ -39,9 +39,9 @@ public class Background {
             backs[i].pos.x -= speed;
         }
 
-        if(backs[0].pos.x < -800){
+        if(backs[0].pos.x < -1920){
             backs[0].pos.x = 0;
-            backs[1].pos.x = 800;
+            backs[1].pos.x = 1920;
         }
     }
 }
