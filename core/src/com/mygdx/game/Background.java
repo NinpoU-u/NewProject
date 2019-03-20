@@ -14,7 +14,7 @@ public class Background {
 
         public BGPicture(Vector2 pos){
             tx = new Texture("fon.png");
-            pos = pos;
+            this.pos = pos;
         }
     }
 
@@ -29,13 +29,18 @@ public class Background {
     }
 
     public void render(SpriteBatch batch){
-        batch.draw(tx, pos.x, pos.y);
+        for (int i = 0; i < backs.length; i++) {
+            batch.draw(backs[i].tx, backs[i].pos.x, backs[i].pos.y);
+        }
     }
 
     public void update(){
-        pos.x -= speed;
-        if (pos.x < -800){
-            pos.x = 0;
+        for (int i = 0; i <backs.length; i++) {
+           backs[i].pos.x -= speed;
+        }
+        backs[0].pos.x -= speed;
+        if (backs[0].pos.x < - 800){
+            backs[0].pos.x = 800;
         }
     }
 }
