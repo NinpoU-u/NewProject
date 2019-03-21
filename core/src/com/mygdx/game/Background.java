@@ -30,7 +30,7 @@ public class Background {
         speed = 3;
         backs = new BGPicture[2];
         backs[0] = new BGPicture(new Vector2(0,0));
-        backs[1] = new BGPicture(new Vector2(1920,0));
+        backs[1] = new BGPicture(new Vector2(1280,0));
     }
 
     //Отрисовываем их поочереди с помощью рендер
@@ -46,9 +46,9 @@ public class Background {
             backs[i].pos.x -= speed;
         }
         //Если позиция первой картинки -1920(ушла за экран), то позиция второй картинки 1920, то есть на месте первой.
-        if(backs[0].pos.x < -1920){
+        if(backs[0].pos.x < -1280){
             backs[0].pos.x = 0;
-            backs[1].pos.x = 1920;
+            backs[1].pos.x = 1280;
         }
     }
 }

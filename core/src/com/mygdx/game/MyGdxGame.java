@@ -14,10 +14,12 @@ public class MyGdxGame extends ApplicationAdapter {
 	Bird bird;
 	Obstacles obstacles;
 
+	public static final String TITLE = "NeverMore";
 	//Запускается единожды, загружаються в память все необходимые элементы,
 	// подготовительные действия, первичный расчет логики, математики
 	@Override
 	public void create () {
+		//SpriteBatch это класс, который предостовляет текстуру и координаты для рисования текстур
 		//Создается батч, с помощью конструктора
 		batch = new SpriteBatch();
 		bg = new Background();

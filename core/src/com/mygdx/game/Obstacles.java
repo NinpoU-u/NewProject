@@ -21,7 +21,7 @@ public class Obstacles {
         public void update(){
             position.x -= speed;
             if (position.x < -50){
-                position.x = 1920;
+                position.x = 1280;
                 offset = new Random().nextInt(250);
             }
         }

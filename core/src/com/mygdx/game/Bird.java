@@ -14,7 +14,7 @@ public class Bird {
 
 
     public Bird(){
-        img = new Texture("bird.png");
+        img = new Texture("flappy-bird.png");
         position = new Vector2(100, 250);
         vy = 0;
         gravity = - 0.7f;
