@@ -14,14 +14,14 @@ public class Obstacles {
 
         public WallPair( Vector2 pos){
             position = pos;
-            speed = 3;
+            speed = 2;
             offset = new Random().nextInt(250);
         }
 
         public void update(){
             position.x -= speed;
             if (position.x < -50){
-                position.x = 1280;
+                position.x = 480;
                 offset = new Random().nextInt(250);
             }
         }
@@ -34,7 +34,7 @@ public class Obstacles {
 
     public Obstacles(){
         tx = new Texture("wall.png");
-        obs = new WallPair[4];
+        obs = new WallPair[3];
         betweenDistance = 250;
         int startPosX = 400;
 
@@ -47,7 +47,7 @@ public class Obstacles {
     public void render(SpriteBatch batch){
         for (int i = 0; i <obs.length ; i++) {
            batch.draw(tx,obs[i].position.x, obs[i].position.y);
-            batch.draw(tx,obs[i].position.x, obs[i].position.y + betweenDistance + tx.getHeight() - obs[i].offset);
+           batch.draw(tx,obs[i].position.x, obs[i].position.y + betweenDistance + tx.getHeight() - obs[i].offset);
         }
     }
 

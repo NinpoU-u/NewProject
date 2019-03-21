@@ -26,7 +26,7 @@ public class Bird {
     public void update(){
         //если нажат пробел, то птица подбьрасывается на ввер на 10.
         if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)){
-            vy = 15;
+            vy = 10;
         }
         // птица движется к земле быстре и быстрее.
         vy += gravity;
