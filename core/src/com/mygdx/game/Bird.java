@@ -33,5 +33,10 @@ public class Bird {
         //позиция птицы меняется на vy
         position.y += vy;
     }
+
+    public void recreate(){
+        position = new Vector2(100, 250);
+        vy = 0;
+    }
 }
 

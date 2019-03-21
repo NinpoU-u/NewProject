@@ -27,7 +27,7 @@ public class Background {
 
     //Создаем массив, помещаем 2 картинки, задаем с помощь. вектора их координаты.
     public Background(){
-        speed = 4;
+        speed = 3;
         backs = new BGPicture[2];
         backs[0] = new BGPicture(new Vector2(0,0));
         backs[1] = new BGPicture(new Vector2(1920,0));
