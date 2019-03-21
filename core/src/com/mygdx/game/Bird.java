@@ -24,11 +24,13 @@ public class Bird {
     }
 
     public void update(){
-        if (Gdx.input.isKeyPressed(Input.Keys.SPACE)){
-            vy = 10;
+        //если нажат пробел, то птица подбьрасывается на ввер на 10.
+        if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)){
+            vy = 15;
         }
-
+        // птица движется к земле быстре и быстрее.
         vy += gravity;
+        //позиция птицы меняется на vy
         position.y += vy;
     }
 }

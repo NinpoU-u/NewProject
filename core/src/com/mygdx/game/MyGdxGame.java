@@ -12,6 +12,7 @@ public class MyGdxGame extends ApplicationAdapter {
 	//Картинка фона
 	Background bg;
 	Bird bird;
+	Obstacles obstacles;
 
 	//Запускается единожды, загружаються в память все необходимые элементы,
 	// подготовительные действия, первичный расчет логики, математики
@@ -21,6 +22,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		batch = new SpriteBatch();
 		bg = new Background();
 		bird = new Bird();
+		obstacles = new Obstacles();
 	}
 
 	//Рендер это метод, который вызывается 60 раз в секунду,
@@ -33,6 +35,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		batch.begin();
 		bg.render(batch);
 		bird.render(batch);
+		obstacles.render(batch);
 		batch.end();
 	}
 
@@ -41,6 +44,7 @@ public class MyGdxGame extends ApplicationAdapter {
 	public void update(){
 		bg.update();
 		bird.update();
+		obstacles.update();
 	}
 
 	//метод, который очишает ресурсы, после закрытия программы
