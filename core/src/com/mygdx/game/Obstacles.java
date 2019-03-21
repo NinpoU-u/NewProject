@@ -38,15 +38,15 @@ public class Obstacles {
         betweenDistance = 250;
         int startPosX = 400;
 
-        for (int i = 0; i <obs.length ; i++) {
+        for (int i = 0; i < obs.length ; i++) {
             obs[i] = new WallPair(new Vector2(startPosX,0));
             startPosX += 220;
         }
     }
 
     public void render(SpriteBatch batch){
-        for (int i = 0; i <obs.length ; i++) {
-           batch.draw(tx,obs[i].position.x, obs[i].position.y);
+        for (int i = 0; i < obs.length ; i++) {
+           batch.draw(tx,obs[i].position.x, obs[i].position.y - obs[i].offset);
            batch.draw(tx,obs[i].position.x, obs[i].position.y + betweenDistance + tx.getHeight() - obs[i].offset);
         }
     }
